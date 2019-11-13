@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>InterArt</title>
+    <link rel="stylesheet" href="quadro.mov.css">
+</head>
+
+<body>
+    <!-- MENU-->
+    <div class="navbar">
+
+            <a href="quadro.obra.html" class="menu-1">Obra</a>
+            <a href="quadro.artista.html" class="menu-1">Artista</a>
+            <a href="quadro.mov.html" class="screen">Movimento Artístico</a>
+            <a href="quadro.rel.html" class="menu">Relacionadas</a>
+    </div>
+
+    <!-- TÍTULO -->
+    <div class="titulo">
+        <h1>Renascimento</h1>
+        <h2>1450- 1527</h2>
+    </div>
+    
+    
+    <!-- CONTEÚDO --> 
+   <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img15.jpeg" alt="A Santa Ceita" class="img" style="width:60%">
+            <div class="desc" id="text1" >É  o período que denota o apogeu das artes visuais no Renascimento italiano. Fez ressurgir o interesse da Europa pela cultura e pelos valores da Antiguidade clássica, sendo caracterizado como conservador; como refletindo novas atitudes em relação à beleza e novas preocupações com interpretação e significado: para criar figuras espirituais, sua imagem não pode parecer muito real e, se você deseja que ela pareça real, sacrifica alguma espiritualidade.<br> <br> Seu estopim foi no final de 1490, quando Leonardo da Vinci terminou o quadro "A Última Ceia", em Milão.
+                    
+            </div>
+            <div class="numbertext">1 / 4</div>
+        </div>
+          
+        <div class="mySlides fade">
+          <img src="img16.png" alt="Corpo de Adão" class="img" style="width:60%">
+          <div class="desc" id="text2" > <h5>Botticelli (1444-1510): </h5>
+                Pintor da escola florentina, nasceu e viveu em Florença. Trabalhou na decoração da Capela Sistina, em 1481. Suas obras abordavam principalmente dois temas: a antigüidade grega e o cristianismo. Em sua obra chama a atenção a leveza dos corpos esguios e desprovidos de força: eles parecem flutuar, expressando suavidade e graça.
+                
+          </div>
+          <div class="numbertext">2 / 4</div>
+        </div>
+          
+        <div class="mySlides fade">
+          <img src="img17.png" alt="Homem Vitruviano" class="img" style="width:45%">
+          <div class="desc" id="text3"><h5> Leonardo da Vinci (1452-1519): </h5>
+                Maior figura da pintura renascentista, também da escola florentina, Leonardo considerava-se, em primeiro lugar, um cientista. Imaginou máquinas voadoras, estudou mecânica, geologia, ótica, hidráulica, anatomia, botânica e astronomia. Além de pintor foi desenhista, escultor, engenheiro e arquiteto. Seus estudos de perspectiva são considerados insuperáveis. O "sfumato", técnica de uso de tons claros e escuros, foi utilizado em suas obras com maestria.
+          </div>
+          <div class="numbertext">3 / 4</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="img18.png" alt="Nascimento de Vênus" class="img" style="width:60%">
+          <div class="desc" id="text4"> <h5>Botticelli (1444-1510):</h5>
+                Pintor da escola florentina, nasceu e viveu em Florença. Trabalhou na decoração da Capela Sistina, em 1481. Suas obras abordavam principalmente dois temas: a antigüidade grega e o cristianismo. Em sua obra chama a atenção a leveza dos corpos esguios e desprovidos de força: eles parecem flutuar, expressando suavidade e graça.
+                
+          </div>
+          <div class="numbertext">3 / 4</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>        
+      </div>
+  
+      <script>
+        var slideIndex = 1;
+         showSlides(slideIndex);
+          
+        function plusSlides(n) {
+         showSlides(slideIndex += n);
+          }
+          
+        function currentSlide(n) {
+         showSlides(slideIndex = n);
+          }
+          
+        function showSlides(n) {
+         var i;
+         var slides = document.getElementsByClassName("mySlides");
+         var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+          }
+      </script>
+          
+  
+  </body>
+  </html>

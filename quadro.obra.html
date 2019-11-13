@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>InterArt</title>
+    <link rel="stylesheet" href="./quadro.obra.css">    
+    <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <a href="#"> <img src="./img/menu.svg" class="hide-desktop" alt="menu" id="menu" width="20"> </a>
+        <a href="./home.html" > <img src="./img/logo_final.png" class="logo" alt="logo interart" height="60" ></a>
+        <ul class="navbar show-desktop hide-mobile" id="nav">
+            <li id="sair" class="fecha-btn hide-desktop"> <img src="./img/exit.svg" alt="fechar menu" width="15"></li>
+            <li><a href="./acervo.html" class="menu">Acervo</a></li>
+            <li><a href="./sobre.html" class="menu">Sobre</a></li>
+            <li><a href="./sugestao.html" class="menu">Sugestões</a></li>        
+        </ul>
+    </nav>
+    <br>
+
+
+    <!-- TÍTULO -->
+    <div class="titulo">
+      <h1> A Criação de Adão</h1>
+      <h2>1508- 1510 </h2>
+    </div>
+
+    <!-- CONTEÚDO --> 
+   <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="esq">
+          <img src="./img//img1.png" alt="Teto da Capela Sistina" class="img" style="width:100%">
+        </div>
+        <div class="dir"> 
+          <div class="desc" id="text1" >A Criação de Adão é um afresco pintado por Michelangelo entre os anos de 1508 e 1510, a pedido do papa Júlio II. O afresco integra um conjunto de pinturas que compõem o teto da Capela Sistina, onde Michelangelo representou várias cenas bíblicas e figuras proféticas.
+          </div>
+          <div class="numbertext">1 / 4</div>
+        </div>
+      </div>
+        
+      <div class="mySlides fade">
+        <div class="esq">
+          <img src="./img/img2.png" alt="Corpo de Adão" class="img" style="width:100%">
+        </div>
+        <div class="dir"> 
+          <div class="desc" id="text2" >O corpo lânguido de Adão se reclina, quase incapaz de erguer a mão em direção à poderosa figura de Deus, que se aproxima para lhe transmitir a centelha de vida. <br><br> O braço de Adão está dobrado e o seu dedo caído, sinais de fraqueza do homem, por oposição à postura de Deus, com o braço estendido e o dedo esticado, sublinhando o gesto do seu poder criador. 
+          </div>
+          <div class="numbertext">2 / 4</div>
+        </div>
+      </div>
+        
+      <div class="mySlides fade">
+        <div class="esq">
+          <img src="./img/img3.png" alt="Dedos indicadores de Adão e Deus, respectivamente, quase se tocando" class="img" style="width:100%">
+        </div>
+        <div class="dir"> 
+          <div class="desc" id="text3">O pequeno espaço entre os dedos de ambos é ampliado pelo vazio absoluto entre as figuras, sem nada ao fundo que distraia o olhar. Isso torna a imagem claramente visível para quem olha do chão.<br> <br> Os membros são simétricos, têm uma constituição muito parecida, fazendo referência à passagem bíblica "Deus criou o homem à sua imagem e semelhança"
+          </div>
+          <div class="numbertext">3 / 4</div>
+        </div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="esq">
+          <img src="./img/img4.png" alt="Deus cercado de anjos e de eva envolto em um manto com o formato do cérebro humano" class="img" style="width:100%">
+        </div>
+        <div class="dir"> 
+          <div class="desc" id="text4">A semelhança entre o manto em que Deus está envolto ao cérebro humano faz uma homenagem à racionalidade humana.Essa escolha teve como base a ideologia humanista e antropocêntrica, que eram os pensamentos vigentes na época.
+          </div>
+          <div class="numbertext">4 / 4</div>
+        </div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>        
+    </div>
+
+    <script>
+      var slideIndex = 1;
+       showSlides(slideIndex);
+        
+      function plusSlides(n) {
+       showSlides(slideIndex += n);
+        }
+        
+      function currentSlide(n) {
+       showSlides(slideIndex = n);
+        }
+        
+      function showSlides(n) {
+       var i;
+       var slides = document.getElementsByClassName("mySlides");
+       var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+    <script>
+    
+      var menu = document.getElementById('menu');
+      var nav = document.getElementById('nav');
+      var sair = document.getElementById('sair');
+
+      menu.addEventListener('click', function(e) {
+          nav.classList.toggle('hide-mobile');
+          e.preventeDefault();
+      });
+      
+      exit.addEventListener('click', function(e) {
+          nav.classList.add('hide-mobile');
+          e.preventeDefault();
+      });
+    </script>
+
+
+</body>
+</html>

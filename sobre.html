@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>InterArt</title>
+    <link rel="stylesheet" href="sobre.css">
+    <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!--MENU PRINCIPAL-->
+<nav>
+    <a href="#"> <img src="./img/menu.svg" class="hide-desktop" alt="menu" id="menu" width="20"> </a>
+    <a href="./home.html" > <img src="./img/logo_final.png" class="logo" alt="logo interart" height="60" ></a>
+    <ul class="navbar show-desktop hide-mobile" id="nav">
+        <li id="sair" class="fecha-btn hide-desktop"> <img src="./img/exit.svg" alt="fechar menu" width="15"></li>
+        <li><a href="./acervo.html" class="menu">Acervo</a></li>
+        <li><a href="./sobre.html" class="screen">Sobre</a></li>
+        <li><a href="./sugestao.html" class="menu">Sugestões</a></li>        
+    </ul>
+</nav>
+<br>
+
+<h1 class="acervo hide-desktop"> Sobre</h1>
+<div class="info">
+    <h2>Arte para todos </h2>
+    <p>O Interart surgiu para introduzir a arte na vida das pessoas de uma forma leve e interativa. Aqui você encontra informações claras e objetivas para poder iniciar sua aventura pela história da arte e conhecer um pouco mais sobre essa prática que cultivamos por toda a História.</p>
+</div> 
+<div>As grandes obras de arte somente são grandes por serem acessíveis e compreendidas por todos. <b>-Leon Tolstói</b></div>
+
+
+<!--JAVASCRIPT-->
+<script>    
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var sair = document.getElementById('sair');
+    
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventeDefault();
+        });
+          
+        sair.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventeDefault();
+        });
+    </script>
+
+</body>
+</html>

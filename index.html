@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>InterArt</title>
+    <link rel="stylesheet" href="complete.css">
+    <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="pular" id="IrConteúdo"><a href="#scroll-to">Pular para conteúdo</a></div>
+<!--MENU PRINCIPAL-->
+    <nav>
+        <a href="#"><img src="./img/menu.svg" class="hide-desktop" alt="menu" id="menu" width="20"></a>
+        <a href="./index.html" > <img src="./img/logo_final.png" class="logo" alt="logo interart" height="60" ></a>
+        <ul class="navbar show-desktop hide-mobile" id="nav">
+            <li id="sair" class="fecha-btn hide-desktop"> <img src="./img/exit.svg" alt="fechar menu" width="15"></li>
+            <li><a href="./acervo.html" class="menu acessibilidade">Acervo</a></li>
+            <li><a href="./sobre.html" class="menu acessibilidade">Sobre</a></li>
+            <li><a href="./sugestao.html" class="menu acessibilidade">Contato</a></li>        
+        </ul>
+    </nav>
+
+    <div class="main">
+        <h1>Mostre-me uma</h1>
+        <h2>Obra de Arte</h2>
+        <button id="explorar" ><a href="quadro-1.html" target="_blank" title="Abrirá em nova janela"></a> Explorar</button>
+    </div>
+  <footer id="fixed">
+      <input type="button" class="mudar-tam" value="A+" onclick="fonte('a');" />
+      <input type="button" class="mudar-tam" value="A-" onclick="fonte('b');" />
+  </footer>
+
+<script>    
+    var menu = document.getElementById('menu');
+    var nav = document.getElementById('nav');
+    var sair = document.getElementById('sair');
+
+    menu.addEventListener('click', function(e) {
+        nav.classList.toggle('hide-mobile');
+        e.preventDefault();
+    });
+      
+    sair.addEventListener('click', function(e) {
+        nav.classList.add('hide-mobile');
+        e.preventDefault();
+    });
+
+    function fonte(e){
+    var elemento = $(".acessibilidade");
+    var fonte = elemento.css('font-size');
+    if (e == 'a') {
+      elemento.css("fontSize", parseInt(fonte) + 1);
+    } else if('b'){
+      elemento.css("fontSize", parseInt(fonte) - 1);
+    }
+  }
+</script>
+
+</body>
+</html>

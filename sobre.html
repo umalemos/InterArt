@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Por: Marcela Lazzari Lemos. Curso de Design PUC-SP 2019">
+    <title>InterArt</title>
+    <link rel="stylesheet" href="complete.css">
+    <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo_final.png" type="image/x-png"/>
+</head>
+
+<body>
+<div class="gif-load"></div>
+<div class="pular" id="IrConteúdo"><a href="#scroll-to">Pular para conteúdo</a></div>
+<!--MENU PRINCIPAL-->
+<nav>
+    <a href="#"> <img src="./img/menu.svg" class="hide-desktop" alt="menu" id="menu" width="20"> </a>
+    <a href="./index.html" > <img src="./img/logo_final.png" class="logo" alt="logo interart" height="60" ></a>
+    <ul class="navbar show-desktop hide-mobile" id="nav">
+        <li id="sair" class="fecha-btn hide-desktop"> <img src="./img/exit.svg" alt="fechar menu" width="15"></li>
+        <li><a href="./index.html" class="menu acessibilidade">Home</a></li>
+        <li><a href="./acervo.html" class="menu acessibilidade">Acervo</a></li>
+        <li><a href="./sobre.html" class="screen acessibilidade">Sobre</a></li>
+        <li><a href="./sugestao.html" class="menu acessibilidade">Contato</a></li>        
+    </ul>
+</nav>
+<br>
+
+<h1 class="acervo hide-desktop" id="scroll-to"> Sobre</h1>
+<div class="info">
+    <h2 class="acessibilidade">Arte para todos </h2>
+    <p class="acessibilidade">O Interart surgiu para introduzir a arte na vida das pessoas de uma forma leve e interativa. Aqui você encontra informações claras e objetivas para poder iniciar sua aventura pela história da arte e conhecer um pouco mais sobre essa prática que cultivamos por toda a História.</p>
+</div> 
+
+  <footer id="fixed">
+      <input type="button" class="mudar-tam" value="A+" onclick="fonte('a');" />
+      <input type="button" class="mudar-tam" value="A-" onclick="fonte('b');" />
+  </footer>
+<!--JAVASCRIPT-->
+<script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>    
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var sair = document.getElementById('sair');
+    
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventeDefault();
+        });
+          
+        sair.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventeDefault();
+        });
+
+      function fonte(e){
+    var elemento = $(".acessibilidade");
+    var fonte = elemento.css('font-size');
+    if (e == 'a') {
+      elemento.css("fontSize", parseInt(fonte) + 1);
+    } else if('b'){
+      elemento.css("fontSize", parseInt(fonte) - 1);
+    }
+  }
+
+  var ht = new HT({
+    token: "4401414408448ca8eb8c32bab276b332"
+  });
+
+  $(window).load(function() {
+		$(".gif-load").fadeOut("slow");;
+	});
+</script>
+
+</body>
+</html>

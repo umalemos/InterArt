@@ -1,0 +1,318 @@
+body {
+  background: #F2F2F2;
+  color: rgb(14, 14, 14);
+  font-family: 'Montserrat', sans-serif;
+}
+
+body, html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.gif-load {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	background: url(./img/gif-load.gif) center no-repeat #f2f2f2;
+}
+
+/* TAB */
+.pular a { 
+  position: absolute; 
+  top: -10000px; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden;
+}
+.pular a:focus, .pular a:active { 
+  position: absolute; 
+  top: 0;
+  width: auto;
+  height: auto;
+  margin: 20px 0 0 25px;
+  padding: 20px 10px 20px 10px;
+  overflow: visible; 
+  text-decoration: none; 
+  background: rgb(14, 14, 14);
+  color: antiquewhite;
+  font-size: 13px;
+}
+
+/*MENU PRINCIPAL*/
+
+  #menu {
+  float: right;
+  width: 25px;
+  margin-right: 15px;
+  padding-top: 18px;
+}
+
+.logo {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: auto;
+}
+
+nav {
+  right: 0;
+  justify-content: space-between;
+}
+
+nav ul {
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 0;
+  z-index: 10;
+}
+
+nav ul li a {
+text-decoration: none;
+color: rgb(14, 14, 14);
+display: block;
+width: fit-content;
+margin: 25px 0 0 auto;
+font-size: 15px;
+text-align: right;
+padding-bottom: 5px;
+}
+
+.menu:hover {
+  border-bottom: 1px solid rgb(14, 14, 14);
+}  
+
+
+.fecha-btn{
+  margin-top: -10px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.navbar {
+list-style-type: none;
+margin-top: 0;
+}
+
+
+#fixed {  
+  display: none;
+}
+
+.pes {
+float: right;
+text-align: right;
+margin: 25px 30px;    
+}
+
+/*quadro */
+.obra1{
+  width: 100%;  
+}
+
+.leg1 {
+  text-align: right;
+}
+.leg1, .leg2{
+  font-size: 14px;
+  margin-top: 10px;  
+  margin-bottom: 40px;
+}
+
+
+.obra2 {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.leg2 {
+  text-align-last: center;
+}
+
+#fixed {  
+  display: none;
+}
+
+.mudar-tam{
+  border: none;
+  background:  rgb(189, 189, 189);
+  color: rgb(14,14,14);
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 0 0 10px;
+}
+
+/* TITULO*/
+.titulo{
+  text-align: left;
+  height: auto;
+  font-family: 'Belleza', sans-serif;
+  margin-left: 2%;
+}
+
+.titulo h1{
+  font-size: 40px;
+  font-weight: lighter;
+  font-style: italic;
+  margin-bottom: auto;
+  margin-top: 0;
+}
+
+.titulo h2 {
+  font-size: 30px;
+  margin-top: 0;
+  font-weight: lighter;
+}
+
+/* CONTEUDO */
+
+* {box-sizing: border-box}
+.slideObra {display: none}
+.slideArtista {display: none}
+.slideMovimento {display: none}
+img {vertical-align: middle;}
+
+#container, #container-2, #container-3 {
+  overflow: hidden;
+}
+
+.slideshow-container, .slideshow-container-2, .slideshow-container-3 {
+  margin-top: 4%;
+  max-width: 1000px;
+  padding-left: 12px;
+  position: relative;
+  margin: auto;
+}
+
+.esq {  
+  float: left;
+  width: 50%;
+}
+  
+.dir {
+  float: right;
+  width: 50%;
+}
+/* prev e next botoes */
+.prev, .next {
+  color: rgb(14, 14, 14);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top:100%;
+}
+  
+/* botão next na direita */
+.next {
+  right: 10px;
+}
+  
+.prev {
+  right: 100px;
+}
+
+/* hover: aumenta tamnho seta*/
+.prev:hover, .next:hover {
+  font-size: 23px;
+  transition: ease-in;
+}
+
+.numbertext {
+  color: rgb(14, 14, 14);
+  font-size: 15px;
+  margin: 5px 0 0 0;
+  position: absolute;
+  top: 0;
+  right: 45px;
+  width: auto;
+}  
+
+/* descrição */
+.desc {
+  color: rgb(14, 14, 14);
+  margin: 0;
+  font-size: 15px;
+  text-align: justify;
+  padding: 12px 12px;
+  position: absolute; /*faz o texto ficar na dir*/
+  right:0;
+  top: 30px;
+  width:47%;
+  height: 300px;  
+  line-height: 120%;
+}
+
+@media only screen and (min-width:768px) {
+  .show-desktop {display:block;margin: 0 30px 20px auto;}
+  .hide-desktop {display:none}
+  nav ul {width: auto; background: none; height: auto;display: flex; padding-top: 10px; padding-right: inherit;}
+  nav ul li {float: left;}
+  nav ul li a { background-color: inherit; font-size: 19px; margin: 15px 10px 0 30px; padding: 0 0 7px 0; width: inherit;}
+  /*scroll*/ 
+  #section05 a span {position: absolute;left: 50%;width: 24px;height: 24px; margin-left: -12px;border-left: 3px solid rgb(255, 255, 255);border-bottom: 3px solid rgb(255, 255, 255);-webkit-transform: rotate(-45deg);transform: rotate(-45deg);-webkit-animation: sdb05 1.5s infinite;animation: sdb05 1.5s infinite;box-sizing: border-box;}
+  @-webkit-keyframes sdb05 {
+    0% {-webkit-transform: rotate(-45deg) translate(0, 0);opacity: 0}
+    50% {opacity: 1;}
+    100% {-webkit-transform: rotate(-45deg) translate(-20px, 20px);opacity: 0;}
+  }
+  @keyframes sdb05 {
+    0% {transform: rotate(-45deg) translate(0, 0);opacity: 0;}
+    50% {opacity: 1;}
+    100% {transform: rotate(-45deg) translate(-20px, 20px);opacity: 0;}
+  }
+  .obra1 {width: 80%;margin-left: 10%; margin-top: 10px;}
+  .obra2 {height: 510px; width: auto; margin-left: 35%;}
+  .leg1{margin-right: 10%; font-size: 15px;}
+  .titulo h1{font-size: 80px;}
+  .titulo {margin-left:10%; margin-bottom: 40px; margin-top: 30px;}
+  #fixed {display: block; position: fixed; bottom: 0; right: 0; margin: 0 10px 10px 0;}
+  #container, #container-2, #container-3 {height: 100%;}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {font-size: 11px;}
+}
+
+@media only screen and (max-width: 850px) and (min-width: 576px){
+.titulo {margin-left: 2%;}
+.titulo h1 {font-size: 50px; margin: 20px 0 0 0;}
+.titulo h2 {margin: 0; font-size: 30px;}
+}
+
+@media only screen and (max-width: 768px) {
+.navbar {font-size: 15px;}
+.slideshow-container, .slideshow-container-2, .slideshow-container-3 {max-width: 576px;padding:0 10px 0 10px;} 
+.obra1 {width:100%;}
+.esq {width:100%; float: none;}
+.dir {width: 100%;}
+.desc {position: relative; width: 100%;}
+.numbertext {font-size: 14px; position: absolute; top: 100%; right: 48%; display: inline;}
+.prev {width: fit-content;left: 40%; margin-right:5px;}
+.next {right: 42%;margin-left:10px; }
+.prev:hover, .next:hover {font-size: 20px;}
+}
